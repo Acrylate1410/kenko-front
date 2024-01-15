@@ -1,7 +1,7 @@
 import { BiPhone } from "react-icons/bi";
 import { PiPhoneCallThin } from "react-icons/pi";
 import { FaFacebookF } from "react-icons/fa";
-import { MdOutlineLocationOn } from "react-icons/md";
+import { MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
 import { MdMailOutline } from "react-icons/md";
 import { MdOutlineFeed } from "react-icons/md";
 import { Link } from "react-router-dom";
@@ -28,6 +28,10 @@ export default function Footer() {
                         <div className="mt-2 flex">
                             <MdMailOutline className="w-[6%] mt-0.5 text-lg"/>
                             <div className="w-[94%] text-sm"><span className="font-medium">Email:</span> akiko.vn3568@gmail.com</div>
+                        </div>
+                        <div className="mt-2 flex">
+                            <MdOutlinePhone className="w-[6%] mt-0.5 text-lg"/>
+                            <div className="w-[94%] text-sm"><span className="font-medium">Hotline:</span> 096 509 1155</div>
                         </div>
                     </div>
                     <div className="mt-4 md:mt-8 md:w-[15%] flex flex-col">
