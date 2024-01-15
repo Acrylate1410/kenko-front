@@ -97,7 +97,7 @@ export function ProductDetails() {
               <div className="text-[15px] mt-2">
                   <span className="font-semibold">Hướng dẫn sử dụng: </span>
                   {props.product.instruction && props.product.instruction.map(i =>
-                    <p key={i}>{"- " + i}</p> 
+                    <p key={i}>{i}</p> 
                   )}
                   <span className="font-semibold">Đối tượng: </span>
                   {props.product.subject && props.product.subject.map(i =>
