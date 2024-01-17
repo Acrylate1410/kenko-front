@@ -75,13 +75,13 @@ export function ProductDetails() {
     const [hover, setHover] = useState(0)
     return (
         <div className="w-4/5 mx-auto my-8 text-justify">
-        <div className="flex font-semibold my-4 border-y border-y-blue-950 py-1 md:pl-4">
-          <div onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer" : "pb-1 cursor-pointer"}>Mô tả sản phẩm</div>
-          <div className="mx-8">|</div>
-          <div onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer" : "pb-1 cursor-pointer"}>Công dụng</div>
-          <div className="mx-8">|</div>
-          <div onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer" : "pb-1 cursor-pointer"}>Hướng dẫn sử dụng</div>
-        </div>
+          <div className="font-semibold my-4 border-y border-y-blue-950 pt-1 pb-3 md:pb-2 md:pl-4 overflow-x-auto">
+            <span onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer overflow-hidden whitespace-nowrap text-ellipsis w-min" : "pb-1 cursor-pointer overflow-hidden whitespace-nowrap text-ellipsis w-min"}>Mô tả sản phẩm</span>
+            <span className="mx-8">|</span>
+            <span onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer overflow-hidden whitespace-nowrap text-ellipsis w-min" : "pb-1 cursor-pointer overflow-hidden whitespace-nowrap text-ellipsis w-min"}>Công dụng</span>
+            <span className="mx-8">|</span>
+            <span onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer overflow-hidden whitespace-nowrap text-ellipsis w-min" : "pb-1 cursor-pointer overflow-hidden whitespace-nowrap text-ellipsis w-min"}>Hướng dẫn sử dụng</span>
+          </div>
           {tab === 1 ? 
               <div className="text-[15px] mt-2">
                   {props.product.description && props.product.description.map(i =>
