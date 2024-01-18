@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
+import { Product } from "./Product";
 export function Search() {
     const [results, setResults] = useState([])
     const [params] = useSearchParams()
@@ -9,14 +10,16 @@ export function Search() {
       }).catch(error => {})
     }, []);
     return (
-        <div className="w-[90%] md:w-1/2 mx-auto mb-8">
-            <h1 className="mt-4 text-lg font-semibold">{"Tìm thấy " + results.length + " kết quả"}</h1>
-            {results.map(i =>
-                <Link key={i.name} reloadDocument className="flex items-center h-40 pl-2 py-1" to={"/san-pham?id=" + i.name.toLowerCase().replaceAll(" ", "-")}>
-                    <div className="h-full aspect-square flex justify-center items-center"><img src={i.thumbnail} className="h-4/5 mx-auto" alt={i.name}></img></div>
-                    <div className="font-semibold text-yellow-950">{i.name}</div>
-                </Link>
-            )}
+        <div className="mb-8">
+            <h1 className="mt-4 text-lg font-semibold text-center">{"Tìm thấy " + results.length + " kết quả"}</h1>
+            <div className="flex flex-wrap">
+                {results.map(i =>
+                    <>
+                        <div className="md:ml-8 ml-4"></div>
+                        <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name}/>
+                    </>
+                )}
+            </div>
         </div>
     )
 }

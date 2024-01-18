@@ -21,6 +21,6 @@ export function News() {
               </Link>
             )}
         </div>
-        </>
+      </>
     )
 }
