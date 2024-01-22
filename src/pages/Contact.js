@@ -1,5 +1,4 @@
 import { Link } from "react-router-dom"
-import { PiPhoneCallThin } from "react-icons/pi"
 import { FaFacebookF } from "react-icons/fa"
 import { FaPhoneVolume } from "react-icons/fa6";
 import { BiLogoMessenger } from "react-icons/bi";
@@ -31,7 +30,7 @@ export function Contact() {
                     </div>
                 </div>
                 <div className="bg-gray-100 px-4 py-12 text-blue-950">
-                    <p className="uppercase font-semibold text-center text-lg">Gửi tin nhắn cho chúng tôi</p>
+                    <p className="font-semibold text-center text-lg">GỬI TIN NHẮN CHO CHÚNG TÔI</p>
                     <div className="my-4"></div>
                     <div className="md:flex justify-between">
                         <input ref={name}  className="border border-gray-300 py-1 px-3 w-full md:flex-1 placeholder:text-sm outline-0 focus:border-gray-500" placeholder="Họ và tên"/>

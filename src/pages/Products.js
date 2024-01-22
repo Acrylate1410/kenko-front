@@ -1,7 +1,6 @@
 import { Product } from './Product';
-import { GoChevronRight, GoChevronDown } from "react-icons/go";
 import { useState, useEffect } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 export function Products() {
   const [products, setProducts] = useState([])
   const [sort, setSort] = useState("Tên sản phẩm từ A-Z")
@@ -26,7 +25,7 @@ export function Products() {
                   </select>
                 </div>
               </div>
-              <div className='flex justify-between flex-wrap w-full mt-4 mb-6'>                
+              <div className='flex flex-wrap w-full mt-4 mb-6'>                
                 {products.sort((a, b) => {
                   if (sort === "Tên sản phẩm từ A-Z") {
                     if (a.name > b.name) {
@@ -34,7 +33,7 @@ export function Products() {
                     } else {
                       return -1
                     }
-                  } else if (sort === "Tên sản phẩm từ Z-A") {
+                  } else {
                     if (a.name > b.name) {
                       return -1
                     } else {
@@ -42,7 +41,10 @@ export function Products() {
                     }
                   }
                 }).map(i => 
-                      <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name}/>
+                    <>
+                    <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name}/>
+                    <div className='md:mr-6'></div>
+                    </>
                   )}
               </div>
             </div>
