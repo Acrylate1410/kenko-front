@@ -46,10 +46,10 @@ const Layout = () => {
       return () => window.removeEventListener('scroll', onScroll);
     }, [])
     return (
-        <div className="App w-full overflow-hidden relative">
-            <header className={'bg-blue-50 header pt-4 pb-1 md:pb-0 md:pt-4 top-0 right-0 left-0 z-30'}>
+        <div className="App w-full overflow-hidden relative bg-blue-50">
+            <header className={'bg-blue-50 header md:py-6 pt-6 pb-2 top-0 right-0 left-0 z-30'}>
               <div className='flex items-center justify-between'>
-                <Link reloadDocument to="/" className='flex h-12 md:h-16 cursor-pointer ml-4 md:ml-12'>
+                <Link reloadDocument to="/" className='flex h-8 cursor-pointer ml-4 md:ml-12'>
                   <img src="LOGOKENKO-01.png" alt="KENKO" className='object-contain'></img>
                 </Link>
                 <Nav/>
@@ -81,8 +81,6 @@ const Layout = () => {
                 </div>
             </section>
             <Footer/>
-            {//<ChatBot/>
-            }
         </div>
 )};
 

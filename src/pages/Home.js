@@ -17,7 +17,7 @@ export function Home() {
                   </SwiperSlide>
           </Swiper>
           <section className='w-full scroll-m-20 mt-4'>
-              <div className='flex justify-center items-center mx-4 md:mx-44'>
+              <div className='flex justify-center items-center mx-4 md:mx-52'>
                 <h2 className='font-semibold text-xl md:text-3xl text-center my-8 mr-4 text-blue-950'>Sản phẩm</h2>
                 <div className='h-1 flex-1 border-b border-blue-950'></div>
               </div>
@@ -26,7 +26,7 @@ export function Home() {
               </div>
           </section>
           <section className='w-full scroll-m-20  mt-8'>
-              <div className='flex justify-center items-center mx-4 md:mx-44'>
+              <div className='flex justify-center items-center mx-4 md:mx-52'>
                 <h2 className='font-semibold text-xl md:text-3xl text-center my-8 mr-4 text-blue-950'>Tin tức</h2>
                 <div className='h-1 flex-1 border-b border-blue-950'></div>
               </div>
@@ -52,13 +52,15 @@ function ProductSwiper() {
       <Swiper breakpoints={{
           0: {
             slidesPerView: 2,
+            spaceBetween: 20
           }, 
           768: {
             slidesPerView: 3,
+            spaceBetween: 30
           },
-        }} spaceBetween={30} navigation={true} modules={[Navigation]} className='products md:!mx-44 !w-[95%] md:!w-full'>
+        }} navigation={true} modules={[Navigation]} className='products md:!mx-52 !w-[92%] md:!w-full'>
             {products.map(i => 
-                <SwiperSlide key={i.name}>
+                <SwiperSlide key={i.name} className='!bg-white'>
                   <Product src={i.thumbnail} name={i.name} link={i.link}/>
                 </SwiperSlide>
             )}
@@ -82,7 +84,7 @@ function ArticleSwiper() {
           768: {
             slidesPerView: 3,
           },
-        }} spaceBetween={30} navigation={true} modules={[Navigation]} className='!mx-8'>
+        }} spaceBetween={30} navigation={true} modules={[Navigation]} className='!mx-4 md:!mx-8'>
       {articleList.map(i =>
         <SwiperSlide key={i.title}>
             <Link to={i.link ? i.link : "/bai-viet?id=" + i._id}>

@@ -5,9 +5,9 @@ export function Search() {
     const [results, setResults] = useState([])
     const [params] = useSearchParams()
     useEffect(() => {
-      fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
-          setResults(data.filter(el => el.name.toLowerCase().includes(params.get("query").replaceAll("-", " "))) || [])
-      }).catch(error => {})
+        fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
+            setResults(data.filter(el => el.name.toLowerCase().includes(params.get("query").replaceAll("-", " "))) || [])
+        }).catch(error => {})
     }, []);
     return (
         <div className="mb-8">

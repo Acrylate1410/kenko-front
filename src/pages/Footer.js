@@ -1,5 +1,3 @@
-import { BiPhone } from "react-icons/bi";
-import { PiPhoneCallThin } from "react-icons/pi";
 import { FaFacebookF } from "react-icons/fa";
 import { MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
 import { MdMailOutline } from "react-icons/md";
@@ -15,26 +13,26 @@ export default function Footer() {
                     <img src="LOGOKENKO-01.png" alt="KENKO" className='object-contain mx-auto'></img>
                 </div>
                 <div className="leading-7 md:flex md:justify-between">
-                    <div className="mt-4 md:mt-8 md:w-2/5 text-justify">
+                    <div className="mt-4 md:w-2/5 text-justify">
                         <div className="font-semibold border-b border-b-blue-950 pb-2 w-full">Công ty TNHH xuất nhập khẩu và thương mại Akiko</div>
                         <div className="mt-2 flex">
                             <MdOutlineLocationOn className="w-[6%] mt-0.5 text-lg"/>
-                            <div className="w-[94%] text-sm"><span className="font-medium">Địa chỉ:</span> Căn 1B-nhà B, Tập thể Quân đội Học viện Chính trị, Kim Mã, phường Kim Mã, quận Ba Đình, thành phố Hà Nội, Việt Nam</div>
+                            <div className="w-[94%] text-sm ml-1"><span className="font-medium">Địa chỉ:</span> Căn 1B-nhà B, Tập thể Quân đội Học viện Chính trị, Kim Mã, phường Kim Mã, quận Ba Đình, thành phố Hà Nội, Việt Nam</div>
                         </div>
                         <div className="mt-2 flex">
                             <MdOutlineFeed className="w-[6%] mt-0.5 text-lg"/>
-                            <div className="w-[94%] text-sm"><span className="font-medium">Số ĐKKD:</span> 0110333040</div>
+                            <div className="w-[94%] text-sm ml-1"><span className="font-medium">Số ĐKKD:</span> 0110333040</div>
                         </div>
                         <div className="mt-2 flex">
                             <MdMailOutline className="w-[6%] mt-0.5 text-lg"/>
-                            <div className="w-[94%] text-sm"><span className="font-medium">Email:</span> akiko.vn3568@gmail.com</div>
+                            <div className="w-[94%] text-sm ml-1"><span className="font-medium">Email:</span> akiko.vn3568@gmail.com</div>
                         </div>
                         <div className="mt-2 flex">
                             <MdOutlinePhone className="w-[6%] mt-0.5 text-lg"/>
-                            <div className="w-[94%] text-sm"><span className="font-medium">Hotline:</span> 096 509 1155</div>
+                            <div className="w-[94%] text-sm ml-1"><span className="font-medium">Hotline:</span> 096 509 1155</div>
                         </div>
                     </div>
-                    <div className="mt-4 md:mt-8 md:w-[15%] flex flex-col">
+                    <div className="mt-4 md:w-[15%] flex flex-col">
                         <div className="font-semibold border-b border-b-blue-950 pb-2 w-full">Đường dẫn</div>
                         {[{text: "Trang chủ", link: "/"}, 
                         {text: "Giới thiệu", link: "/gioi-thieu"},
@@ -44,7 +42,7 @@ export default function Footer() {
                             <Link reloadDocument to={i.link} className="mt-2 w-fit text-sm" key={i.text}><div className='cursor-pointer hover:scale-105 transition'>{i.text}</div></Link>
                         )}
                     </div>
-                    <div className="flex flex-col items-center md:w-[15%] md:mr-12 mt-4 md:mt-8">
+                    <div className="flex flex-col items-center md:w-[15%] md:mr-12 mt-4">
                         <div className="font-semibold border-b border-b-blue-950 pb-2 w-full">Thông tin liên hệ</div>
                         <div className="flex w-full mt-1">       
                             <Link to="tel:0965091155" className='h-9 aspect-square flex justify-center items-center my-2  rounded-full border border-blue-950 hover:scale-125 transition hover:bg-blue-950 hover:text-white hover:border-white'>
