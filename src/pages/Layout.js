@@ -47,7 +47,7 @@ const Layout = () => {
     }, [])
     return (
         <div className="App w-full overflow-hidden relative bg-blue-50">
-            <header className={'bg-blue-50 header md:py-6 pt-6 pb-2 top-0 right-0 left-0 z-30'}>
+            <header className={'bg-gradient-to-r from-white to-blue-50 header md:py-6 pt-6 pb-2 top-0 right-0 left-0 z-30'}>
               <div className='flex items-center justify-between'>
                 <Link reloadDocument to="/" className='flex h-8 cursor-pointer ml-4 md:ml-12'>
                   <img src="LOGOKENKO-01.png" alt="KENKO" className='object-contain'></img>
@@ -115,7 +115,7 @@ function HSearchBar() {
   return (
     <form className='w-full relative hidden md:block' ref={outerRef} onSubmit={handleSubmit}>
       <Link to="#" className='absolute right-3 top-0 bottom-0 flex items-center'><CiSearch/></Link>
-      <input ref={input} className='border py-1 px-3 w-full placeholder:text-sm outline-0 bg-blue-50 border-gray-500' placeholder='Nhập từ khóa tìm kiếm' onInput={(e) => showSuggestion(e.target.value)}></input>
+      <input ref={input} className='border py-1 px-3 w-full placeholder:text-sm outline-0 bg-transparent border-gray-500' placeholder='Nhập từ khóa tìm kiếm' onInput={(e) => showSuggestion(e.target.value)}></input>
       <div className={query === "" ? "hidden" : "absolute left-0 right-0 bg-white top-9 border border-gray-300 z-[10000]"}>
           {products.filter(el => {
               if (query === '') {
