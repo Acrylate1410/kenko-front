@@ -20,10 +20,6 @@ export function Contact() {
                             <div className="w-[94%] ml-1"><span className="font-medium">Địa chỉ:</span> Căn 1B-nhà B, Tập thể Quân đội Học viện Chính trị, Kim Mã, phường Kim Mã, quận Ba Đình, thành phố Hà Nội, Việt Nam</div>
                         </div>
                         <div className="mt-2 flex">
-                            <MdOutlineFeed className="w-[6%] mt-1 text-lg"/>
-                            <div className="w-[94%] ml-1"><span className="font-medium">Số ĐKKD:</span> 0110333040</div>
-                        </div>
-                        <div className="mt-2 flex">
                             <MdMailOutline className="w-[6%] mt-1 text-lg"/>
                             <div className="w-[94%] ml-1"><span className="font-medium">Email:</span> akiko.vn3568@gmail.com</div>
                         </div>
