@@ -20,7 +20,7 @@ export function ProductDetails() {
           <div className='mt-8 text-xs ml-8 md:ml-32 text-gray-500'><Link to="/">Trang chủ</Link><span className='mx-1'>|</span><span><Link to="/danh-muc-san-pham">Danh mục sản phẩm</Link></span><span className='mx-1'>|</span><span className="font-semibold">{product.name}</span></div>
           <div className="flex flex-col md:flex-row md:mt-8 justify-center">
             <div className="md:w-1/3 order-3 md:order-1">
-              <SwiperComponent slide1={product.thumbnail} slide2={product.thumbnail}/>
+              <SwiperComponent slide1={product.slide1} slide2={product.thumbnail}/>
             </div>
             <div className="mx-8 order-2"></div>
             <div className="md:w-1/3 mt-4 md:mt-0 md:order-3 order-1">
@@ -113,10 +113,6 @@ export function ProductDetails() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
       <>
-          <div className=" w-full aspect-square flex justify-center items-center shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-gray-300">
-            <img src={props.slide1} className="h-[75%]" alt={props.name}/>
-          </div>
-      {/*
         <Swiper style={{'--swiper-pagination-color': '#fff',}}
           spaceBetween={10} thumbs={{ swiper: thumbsSwiper }} modules={[FreeMode, Thumbs]}
           className="mySwiper2 w-full aspect-square  shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-gray-300 !hidden md:!block">
@@ -127,9 +123,6 @@ export function ProductDetails() {
             <img src={props.slide2} className="h-[75%]" alt={props.name}/>
           </SwiperSlide>
         </Swiper>
-    */}
-
-        {/*
         <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={4} freeMode={true} watchSlidesProgress={true}
           modules={[FreeMode, Thumbs]}
           className="thumb shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] w-full aspect-[4/1] !hidden md:!block">
@@ -148,7 +141,6 @@ export function ProductDetails() {
             <img src={props.slide2} className="h-[75%]" alt={props.name}/>
           </SwiperSlide>
         </Swiper>
-    */}
       </>
     )
 }
