@@ -9,7 +9,6 @@ import { CiSearch } from "react-icons/ci";
 import { PiShoppingCartSimpleThin } from "react-icons/pi";
 import { PiCertificateFill, PiPhoneCallThin } from "react-icons/pi";
 import { FiPhone } from "react-icons/fi";
-import Snowfall from 'react-snowfall'
 import Hamburger from "hamburger-react";
 const Layout = () => {
     const [pos, setPos] = useState("right-[-61px]")
