@@ -75,12 +75,10 @@ export function ProductDetails() {
     const [hover, setHover] = useState(0)
     return (
         <div className="w-4/5 mx-auto my-8 text-justify">
-          <div className="font-semibold my-4 border-y border-y-blue-950 pt-1 pb-3 md:pb-2 md:pl-4 overflow-x-auto">
-            <span onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer whitespace-nowrap" : "pb-1 cursor-pointer whitespace-nowrap"}>Mô tả sản phẩm</span>
-            <span className="mx-8">|</span>
-            <span onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer whitespace-nowrap" : "pb-1 cursor-pointer whitespace-nowrap"}>Công dụng</span>
-            <span className="mx-8">|</span>
-            <span onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "border-b-2 border-b-blue-950 text-blue-950 pb-1 cursor-pointer whitespace-nowrap" : "pb-1 cursor-pointer whitespace-nowrap"}>Hướng dẫn sử dụng</span>
+          <div className="font-semibold my-4 py-6 overflow-x-auto">
+            <span onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap" : "px-8 pb-4 cursor-pointer whitespace-nowrap"}>Mô tả sản phẩm</span>
+            <span onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap" : "px-8 pb-4 cursor-pointer whitespace-nowrap"}>Công dụng</span>
+            <span onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap" : "px-8 pb-4 cursor-pointer whitespace-nowrap"}>Hướng dẫn sử dụng</span>
           </div>
           {tab === 1 ? 
               <div className="text-[15px] mt-2">

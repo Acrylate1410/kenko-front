@@ -16,26 +16,23 @@ export function Home() {
                     <div className='w-full h-full bg-[url(/public/288226102_102207869202114_7592646097454851360_n.jpg)] bg-cover bg-center'></div>
                   </SwiperSlide>
           </Swiper>
-          <section className='w-full scroll-m-20 mt-4'>
-              <div className='flex justify-center items-center mx-4 md:mx-52'>
-                <h2 className='font-semibold text-xl md:text-3xl text-center my-8 mr-4 text-blue-950'>Sản phẩm</h2>
-                <div className='h-1 flex-1 border-b border-blue-950'></div>
+          <section className='w-full scroll-m-20 mt-8'>
+              <div className='flex justify-between items-center mx-4 md:mx-8'>
+                <h2 className='font-semibold text-xl md:text-3xl text-center my-4 mr-4 text-blue-950'>Sản phẩm</h2>
+                <Link to="/danh-muc-san-pham" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-2'>Xem tất cả sản phẩm &rarr;</Link>
               </div>
+              <hr className='mx-8 border border-t-blue-950 mb-8'/>
               <div className='md:flex md:justify-between md:items-center flex-wrap'>
                 <ProductSwiper/>
               </div>
           </section>
-          <section className='w-full scroll-m-20  mt-8'>
-              <div className='flex justify-center items-center mx-4 md:mx-52'>
-                <h2 className='font-semibold text-xl md:text-3xl text-center my-8 mr-4 text-blue-950'>Tin tức</h2>
-                <div className='h-1 flex-1 border-b border-blue-950'></div>
+          <section className='w-full scroll-m-20 mt-8 mb-12'>
+              <div className='flex justify-between items-center mx-4 md:mx-8'>
+                <h2 className='font-semibold text-xl md:text-3xl text-center my-4 mr-4 text-blue-950'>Tin tức</h2>
+                <Link to="/tin-tuc" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-2'>Xem tất cả tin tức &rarr;</Link>
               </div>
+              <hr className='mx-8 border border-t-blue-950 mb-8'/>
               <ArticleSwiper/>
-              <Link to="/tin-tuc" reloadDocument className='block w-fit mx-auto'>
-                <button className='mt-4 mb-12 text-sm w-36 h-9 rounded-full flex items-center justify-center border border-blue-950 text-blue-950 hover:scale-105 transition '>
-                        Xem thêm tin tức   
-                </button>
-              </Link>
           </section>
         </div>
     )
@@ -55,10 +52,10 @@ function ProductSwiper() {
             spaceBetween: 20
           }, 
           768: {
-            slidesPerView: 3,
+            slidesPerView: 4,
             spaceBetween: 30
           },
-        }} navigation={true} modules={[Navigation]} className='products md:!mx-52 !w-[92%] md:!w-full'>
+        }} navigation={true} modules={[Navigation]} className='products md:!mx-8 !w-[92%] md:!w-full'>
             {products.map(i => 
                 <SwiperSlide key={i.name} className='!bg-white'>
                   <Product src={i.thumbnail} name={i.name} link={i.link}/>
