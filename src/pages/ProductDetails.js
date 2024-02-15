@@ -114,30 +114,27 @@ export function ProductDetails() {
         <Swiper style={{'--swiper-pagination-color': '#fff',}}
           spaceBetween={10} thumbs={{ swiper: thumbsSwiper }} modules={[FreeMode, Thumbs]}
           className="mySwiper2 w-full aspect-square  shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-gray-300 !hidden md:!block">
-          <SwiperSlide className="w-full !flex items-center justify-center h-full">
-            <img src={props.slide1} className="h-[75%]" alt={props.name}/>
-          </SwiperSlide>
-          <SwiperSlide className="w-full !flex items-center justify-center h-full">
-            <img src={props.slide2} className="h-[75%]" alt={props.name}/>
-          </SwiperSlide>
+          {[props.slide1, props.slide2].map(i => 
+            <SwiperSlide className="w-full !flex items-center justify-center h-full">
+              <img src={i} className="h-[75%]" alt={props.name}/>
+            </SwiperSlide>
+          )}
         </Swiper>
         <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={4} freeMode={true} watchSlidesProgress={true}
           modules={[FreeMode, Thumbs]}
           className="thumb shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] w-full aspect-[4/1] !hidden md:!block">
-          <SwiperSlide className="w-full !flex items-center justify-center h-full">
-            <img src={props.slide1} className="h-[75%]" alt={props.name}/>
-          </SwiperSlide>
-          <SwiperSlide className="w-full !flex items-center justify-center h-full">
-            <img src={props.slide2} className="h-[75%]" alt={props.name}/>
-          </SwiperSlide>
+          {[props.slide1, props.slide2].map(i => 
+            <SwiperSlide className="w-full !flex items-center justify-center h-full">
+              <img src={i} className="h-[75%]" alt={props.name}/>
+            </SwiperSlide>
+          )}
         </Swiper>
         <Swiper pagination={true} modules={[Pagination]} className="mySwiper  w-full aspect-square  shadow-[0_10px_10px_-10px_rgba(0,0,0,0.3)] md:!hidden">
-          <SwiperSlide className="w-full !flex items-center justify-center h-full">
-            <img src={props.slide1} className="h-[75%]" alt={props.name}/>
-          </SwiperSlide>
-          <SwiperSlide className="w-full !flex items-center justify-center h-full">
-            <img src={props.slide2} className="h-[75%]" alt={props.name}/>
-          </SwiperSlide>
+          {[props.slide1, props.slide2].map(i => 
+            <SwiperSlide className="w-full !flex items-center justify-center h-full">
+              <img src={i} className="h-[75%]" alt={props.name}/>
+            </SwiperSlide>
+          )}
         </Swiper>
       </>
     )

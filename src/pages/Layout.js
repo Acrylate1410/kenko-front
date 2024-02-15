@@ -6,8 +6,7 @@ import { FaShippingFast } from "react-icons/fa";
 import { SlArrowUp } from "react-icons/sl";
 import { Nav } from "./Nav";
 import { CiSearch } from "react-icons/ci";
-import { PiShoppingCartSimpleThin } from "react-icons/pi";
-import { PiCertificateFill, PiPhoneCallThin } from "react-icons/pi";
+import { PiShoppingCartSimpleThin, PiCertificateFill } from "react-icons/pi";
 import { FiPhone } from "react-icons/fi";
 import Hamburger from "hamburger-react";
 const Layout = () => {

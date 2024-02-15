@@ -1,9 +1,6 @@
 import { Link } from "react-router-dom"
-import { FaFacebookF } from "react-icons/fa"
-import { FaPhoneVolume } from "react-icons/fa6";
-import { BiLogoMessenger } from "react-icons/bi";
 import { useRef } from "react";
-import { MdMailOutline, MdOutlineFeed, MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
+import { MdMailOutline, MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
 export function Contact() {
     const name = useRef(null)
     const phone = useRef(null)
@@ -31,12 +28,14 @@ export function Contact() {
                 <div className="bg-gray-100 px-4 py-8 text-blue-950 md:w-[45%]">
                     <p className="font-semibold text-center text-lg">Gửi tin nhắn cho chúng tôi</p>
                     <div className="my-4"></div>
-                    <input ref={name}  className="border border-gray-300 py-1 px-3 w-full md:flex-1 placeholder:text-sm outline-0 focus:border-gray-500" placeholder="Họ và tên"/>
-                    <div className="my-4"></div>
-                    <input ref={phone} className="border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder="Số điện thoại"/>
-                    <div className="my-4"></div>
-                    <input ref={email} className="border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder="Email"/>
-                    <div className="my-4"></div>
+                    {[{ref: name, placeholder: "Họ và tên"}, 
+                    {ref: phone, placeholder: "Số điện thoại"}, 
+                    {ref: email, placeholder: "Email"}].map(i =>
+                    <>
+                        <input ref={i.ref}  className="border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder={i.placeholder}/>
+                        <div className="my-4"></div>
+                    </>
+                    )}
                     <textarea ref={message} rows={4} className="resize-none border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder="Lời nhắn"/>
                     <div className="w-full justify-center flex items-center"><button onClick={() => {}} className="rounded-lg border border-gray-500 py-1 px-3 font-semibold mx-auto mt-4 bg-blue-950 text-white hover:scale-105 transition text-sm">Gửi tin nhắn</button></div>
                 </div>

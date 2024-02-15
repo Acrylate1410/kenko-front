@@ -101,7 +101,8 @@ export function NewsDashboard() {
                             <td className="px-4 py-2">
                                 <div className="flex justify-around text-2xl">
                                     <Link to={"/article?id=" + i._id}><AiOutlineEye/></Link>
-                                    <a href={"./" + i.content} download><AiOutlineDownload/></a>
+                                    {/*<a href={"./" + i.content} download><AiOutlineDownload/></a>*/}
+                                    <Link to={"./" + i.content} target="_blank" download><AiOutlineDownload/></Link>
                                     <Link to={"/edit_article?id=" + i._id}><AiOutlineEdit/></Link>
                                 </div>
                             </td>

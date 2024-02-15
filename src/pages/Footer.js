@@ -1,7 +1,5 @@
 import { FaFacebookF } from "react-icons/fa";
-import { MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
-import { MdMailOutline } from "react-icons/md";
-import { MdOutlineFeed } from "react-icons/md";
+import { MdOutlineLocationOn, MdOutlinePhone, MdMailOutline, MdOutlineFeed} from "react-icons/md";
 import { Link } from "react-router-dom";
 import { FaPhoneVolume } from "react-icons/fa6";
 import { BiLogoMessenger } from "react-icons/bi";
