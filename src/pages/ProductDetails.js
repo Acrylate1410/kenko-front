@@ -36,7 +36,7 @@ export function ProductDetails() {
                 }
                 <p className="mb-2"><span className="font-semibold">Nhà sản xuất: </span><span>{product.factory}</span></p>
                 <p className="mb-2"><span className="font-semibold">Địa chỉ: </span><span>{product.address}</span></p>
-                <Link to="#" className='w-fit mt-6 py-2 px-2 md:px-4 bg-blue-950 text-white font-semibold transition mb-4 rounded-lg flex items-center justify-center'>
+                <Link to="#" className='w-fit mt-6 py-2 px-2 md:px-4 bg-blue-950 hover:bg-white border border-blue-950 hover:text-blue-950 text-white font-semibold transition mb-4 rounded-lg flex items-center justify-center'>
                   <PiShoppingCartSimpleThin className="text-lg"/>
                   <div className="mx-1"></div>
                   <div className="text-xs md:text-sm">Liên hệ để mua hàng</div>
@@ -45,11 +45,11 @@ export function ProductDetails() {
             </div>
           </div>
           <div className="mx-8">
-            <Link to="#" className='md:hidden w-full mt-6 py-2 px-2 md:px-4 bg-blue-950 transition text-white mb-4 flex items-center justify-center'>
-              <PiShoppingCartSimpleThin className="text-lg"/>
-              <div className="mx-1"></div>
-              <div className="text-xs md:text-sm">Liên hệ để mua hàng</div>
-            </Link>
+              <Link to="#" className='md:hidden w-full mt-6 py-2 px-2 md:px-4 bg-blue-950 hover:bg-white border border-blue-950 hover:text-blue-950 transition text-white mb-4 flex items-center justify-center'>
+                <PiShoppingCartSimpleThin className="text-lg"/>
+                <div className="mx-1"></div>
+                <div className="text-xs md:text-sm">Liên hệ để mua hàng</div>
+              </Link>
           </div>
           <div className="w-4/5 mx-auto mt-4  md:hidden ">
               <div className="mt-2">
@@ -76,17 +76,17 @@ export function ProductDetails() {
     return (
         <div className="w-4/5 mx-auto my-8 text-justify">
           <div className="font-semibold my-4 py-6 overflow-x-auto">
-            <span onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap" : "px-8 pb-4 cursor-pointer whitespace-nowrap"}>Mô tả sản phẩm</span>
-            <span onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap" : "px-8 pb-4 cursor-pointer whitespace-nowrap"}>Công dụng</span>
-            <span onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap" : "px-8 pb-4 cursor-pointer whitespace-nowrap"}>Hướng dẫn sử dụng</span>
+            <span onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap mr-2" : "px-8 pb-4 cursor-pointer whitespace-nowrap mr-2"}>Mô tả sản phẩm</span>
+            <span onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap mr-2" : "px-8 pb-4 cursor-pointer whitespace-nowrap mr-2"}>Công dụng</span>
+            <span onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap mr-2" : "px-8 pb-4 cursor-pointer whitespace-nowrap mr-2"}>Hướng dẫn sử dụng</span>
           </div>
-          {tab === 1 ? 
+           {tab === 1 ? 
               <div className="text-[15px] mt-2">
                   {props.product.description && props.product.description.map(i =>
                     <div key={i}>{i}</div>  
                   )}
               </div> : 
-          tab === 2 ?
+            tab === 2 ?
               <div className="text-[15px] mt-2">
                   {props.product.function && props.product.function.map(i =>
                       <div className="flex items-start" key={i}>{"- " + i}</div>
@@ -95,14 +95,14 @@ export function ProductDetails() {
               <div className="text-[15px] mt-2">
                   <span className="font-semibold">Hướng dẫn sử dụng: </span>
                   {props.product.instruction && props.product.instruction.map(i =>
-                    <p key={i}>{i}</p> 
+                    <p key={i}>{"- " + i}</p> 
                   )}
                   <span className="font-semibold">Đối tượng: </span>
                   {props.product.subject && props.product.subject.map(i =>
                     <p key={i}>{"- " + i}</p> 
                   )}  
               </div>
-        }
+          }
       </div>
     )
   }

@@ -31,10 +31,10 @@ export function Contact() {
                     {[{ref: name, placeholder: "Họ và tên"}, 
                     {ref: phone, placeholder: "Số điện thoại"}, 
                     {ref: email, placeholder: "Email"}].map(i =>
-                    <>
-                        <input ref={i.ref}  className="border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder={i.placeholder}/>
-                        <div className="my-4"></div>
-                    </>
+                        <>
+                            <input ref={i.ref} className="border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder={i.placeholder}/>
+                            <div className="my-4"></div>
+                        </>
                     )}
                     <textarea ref={message} rows={4} className="resize-none border border-gray-300 py-1 px-3 w-full placeholder:text-sm outline-0 focus:border-gray-500" placeholder="Lời nhắn"/>
                     <div className="w-full justify-center flex items-center"><button onClick={() => {}} className="rounded-lg border border-gray-500 py-1 px-3 font-semibold mx-auto mt-4 bg-blue-950 text-white hover:scale-105 transition text-sm">Gửi tin nhắn</button></div>

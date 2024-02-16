@@ -11,7 +11,7 @@ export function Home() {
     return (
         <div className="relative">
           <Swiper slidesPerView={1} autoplay={{delay: 5000, disableOnInteraction: false}}
-            spaceBetween={30} pagination={{clickable: true}} modules={[Autoplay, Pagination]} className='!w-full h-[250px] md:h-[650px]'>
+              spaceBetween={30} pagination={{clickable: true}} modules={[Autoplay, Pagination]} className='!w-full h-[250px] md:h-[650px]'>
                   <SwiperSlide className='!flex items-center !h-full'>     
                     <div className='w-full h-full bg-[url(/public/288226102_102207869202114_7592646097454851360_n.jpg)] bg-cover bg-center'></div>
                   </SwiperSlide>
@@ -19,7 +19,7 @@ export function Home() {
           <section className='w-full scroll-m-20 mt-8'>
               <div className='flex justify-between items-center mx-4 md:mx-8'>
                 <h2 className='font-semibold text-xl md:text-3xl text-center my-4 mr-4 text-blue-950'>Sản phẩm</h2>
-                <Link to="/danh-muc-san-pham" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-2'>Xem tất cả sản phẩm &rarr;</Link>
+                <Link reloadDocument to="/danh-muc-san-pham" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-4 rounded-lg transition duration-100'>Xem tất cả sản phẩm &rarr;</Link>
               </div>
               <hr className='mx-8 border border-t-blue-950 mb-8'/>
               <div className='md:flex md:justify-between md:items-center flex-wrap'>
@@ -29,7 +29,7 @@ export function Home() {
           <section className='w-full scroll-m-20 mt-8 mb-12'>
               <div className='flex justify-between items-center mx-4 md:mx-8'>
                 <h2 className='font-semibold text-xl md:text-3xl text-center my-4 mr-4 text-blue-950'>Tin tức</h2>
-                <Link to="/tin-tuc" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-2'>Xem tất cả tin tức &rarr;</Link>
+                <Link reloadDocument to="/tin-tuc" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-4 rounded-lg transition duration-100'>Xem tất cả tin tức &rarr;</Link>
               </div>
               <hr className='mx-8 border border-t-blue-950 mb-8'/>
               <ArticleSwiper/>
@@ -57,9 +57,9 @@ function ProductSwiper() {
           },
         }} navigation={true} modules={[Navigation]} className='products md:!mx-8 !w-[92%] md:!w-full'>
             {products.map(i => 
-                <SwiperSlide key={i.name} className='!bg-white'>
-                  <Product src={i.thumbnail} name={i.name} link={i.link}/>
-                </SwiperSlide>
+              <SwiperSlide key={i.name} className='!bg-white'>
+                <Product src={i.thumbnail} name={i.name} link={i.link}/>
+              </SwiperSlide>
             )}
       </Swiper>
     )
@@ -73,8 +73,7 @@ function ArticleSwiper() {
     }).catch(error => {})
   }, []);
   return (
-    <Swiper
-        breakpoints={{
+    <Swiper breakpoints={{
           0: {
             slidesPerView: 1,
           }, 
