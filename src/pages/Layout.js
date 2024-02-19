@@ -113,14 +113,14 @@ function HSearchBar() {
   return (
     <form className='w-full relative hidden md:block' ref={outerRef} onSubmit={handleSubmit}>
       <Link reloadDocument to={"/search?query=" + query.toLowerCase().replaceAll(" ", "-")} className='absolute right-3 top-0 bottom-0 flex items-center'><CiSearch/></Link>
-      <input ref={input} className='border py-1 px-3 w-full placeholder:text-sm outline-0 bg-transparent border-gray-500' placeholder='Nhập từ khóa tìm kiếm' onInput={(e) => showSuggestion(e.target.value)}></input>
+      <input ref={input} className='border py-1 px-3 w-full placeholder:text-sm outline-0 bg-transparent border-gray-500' placeholder='Nhập từ khóa tìm kiếm' onInput={(e) => showSuggestion(e.target.value)} onFocus={(e) => showSuggestion(e.target.value)}></input>
       <div className={query === "" ? "hidden" : "absolute left-0 right-0 bg-white top-9 border border-gray-300 z-[10000]"}>
           {products.filter(el => {
               if (query === '') {
                   return false
               }
               return el.name.toLowerCase().startsWith(query.toLowerCase())}).map(i => 
-                <Link reloadDocument to={"/san-pham?id=" + i.name.toLowerCase().replaceAll(" ", "-")} className="flex items-center h-16 border-b border-b-gray-300 pl-2 py-1" onClick={() => setQuery("")}>
+                <Link reloadDocument to={"/san-pham?id=" + i.name.toLowerCase().replaceAll(" ", "-")} className="flex items-center h-16 border-b border-b-gray-300 pl-2 py-1 hover:bg-slate-100" onClick={() => setQuery("")}>
                   <div className="h-full aspect-square flex justify-center items-center"><img src={i.thumbnail} alt={i.name} className="h-4/5 mx-auto"></img></div>
                   <div className="font-semibold text-blue-950 text-sm">{i.name}</div>
                 </Link>

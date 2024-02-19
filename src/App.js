@@ -16,7 +16,7 @@ import { Search } from './pages/Search';
 function App() {
   return (
     <BrowserRouter>
-      <Suspense>
+      <Suspense fallback={<></>}>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
