@@ -158,7 +158,7 @@ function VSearchBar() {
   return (
     <form className='w-full relative md:hidden mt-4' ref={outerRef} onSubmit={handleSubmit}>
         <Link reloadDocument to={"/search?query=" + query.toLowerCase().replaceAll(" ", "-")} className='absolute right-3 top-0 bottom-0 flex items-center'><CiSearch/></Link>
-        <input ref={input} className='border border-gray-300 bg-transparent py-1 px-3 w-full placeholder:text-sm outline-0' placeholder='Nhập từ khóa tìm kiếm' onInput={(e) => showSuggestion(e.target.value)}></input>
+        <input ref={input} className='border border-gray-300 bg-transparent py-1 px-3 w-full placeholder:text-sm outline-0' placeholder='Nhập từ khóa tìm kiếm' onFocus={(e) => showSuggestion(e.target.value)} onInput={(e) => showSuggestion(e.target.value)}></input>
         <div className={query === "" ? "hidden" : "absolute left-0 right-0 bg-white top-9 border-l border-r border-t border-gray-300 z-[10000]"}>
             {products.filter(el => {
                 if (query === '') {
