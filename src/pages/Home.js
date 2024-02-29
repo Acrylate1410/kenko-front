@@ -19,7 +19,10 @@ export function Home() {
           <section className='w-full scroll-m-20 mt-8'>
               <div className='flex justify-between items-center mx-4 md:mx-8'>
                 <h2 className='font-semibold text-xl md:text-3xl text-center my-4 mr-4 text-blue-950'>Sản phẩm</h2>
-                <Link reloadDocument to="/danh-muc-san-pham" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-4 rounded-lg transition duration-100'>Xem tất cả sản phẩm &rarr;</Link>
+                <Link reloadDocument to="/danh-muc-san-pham" className='font-semibold text-lg text-center text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-4 rounded-lg transition duration-100'>
+                  <span>Xem tất cả sản phẩm</span>
+                  <span className='ml-2'>&rarr;</span>
+                </Link>
               </div>
               <hr className='mx-8 border border-t-blue-950 mb-8'/>
               <div className='md:flex md:justify-between md:items-center flex-wrap'>
@@ -29,9 +32,12 @@ export function Home() {
           <section className='w-full scroll-m-20 mt-8 mb-12'>
               <div className='flex justify-between items-center mx-4 md:mx-8'>
                 <h2 className='font-semibold text-xl md:text-3xl text-center my-4 mr-4 text-blue-950'>Tin tức</h2>
-                <Link reloadDocument to="/tin-tuc" className='font-semibold text-lg text-center ml-4 text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-4 rounded-lg transition duration-100'>Xem tất cả tin tức &rarr;</Link>
+                <Link reloadDocument to="/tin-tuc" className='font-semibold text-lg text-center text-blue-950 hover:bg-blue-950 hover:text-white py-1 px-4 rounded-lg transition duration-100'>
+                  <span>Xem tất cả tin tức</span>
+                  <span className='ml-2'>&rarr;</span>
+                </Link>
               </div>
-              <hr className='mx-8 border border-t-blue-950 mb-8'/>
+              <hr className='mx-4 md:mx-8 border border-t-blue-950 mb-8'/>
               <ArticleSwiper/>
           </section>
         </div>

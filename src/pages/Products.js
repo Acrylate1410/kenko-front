@@ -12,8 +12,8 @@ export function Products() {
     return (
         <>
           <div className='mt-8 text-xs ml-8 md:ml-32 text-gray-500'><Link to="/">Trang chủ</Link><span className='mx-1'>|</span><span className='font-semibold'>Danh mục sản phẩm</span></div>
-          <div className='ml-8 mt-4 md:mt-0'>
-            <div className="md:mr-6 md:ml-auto">
+          <div className='mx-8 mt-4 md:mt-0'>
+            <div className="md:ml-auto">
               <div className='flex items-center justify-end'>
                 <label for="orders" className='text-sm font-semibold text-blue-950'>Sắp xếp theo</label>
                 <div className='mx-1'></div>
@@ -41,7 +41,6 @@ export function Products() {
               }).map(i => 
                   <>
                     <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name}/>
-                    <div className='md:mr-6'></div>
                   </>
                 )}
             </div>
