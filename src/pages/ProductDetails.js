@@ -3,8 +3,9 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css';
 import 'swiper/css/free-mode';
 import 'swiper/css/pagination';
+import 'swiper/css/navigation';
 import 'swiper/css/thumbs';
-import { FreeMode, Thumbs, Pagination } from 'swiper/modules';
+import { FreeMode, Thumbs, Pagination, Navigation } from 'swiper/modules';
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 export function ProductDetails() {
@@ -111,8 +112,8 @@ export function ProductDetails() {
     const [thumbsSwiper, setThumbsSwiper] = useState(null);
     return (
       <>
-        <Swiper style={{'--swiper-pagination-color': '#fff',}}
-          spaceBetween={10} thumbs={{ swiper: thumbsSwiper }} modules={[FreeMode, Thumbs]}
+        <Swiper style={{'--swiper-navigation-color': '#000', '--swiper-pagination-color': '#fff',}}
+          spaceBetween={10} navigation={true} thumbs={{ swiper: thumbsSwiper }} modules={[FreeMode, Thumbs, Navigation]}
           className="mySwiper2 w-full aspect-square  shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] border border-gray-300 !hidden md:!block">
           {[props.slide1, props.slide2].map(i => 
             <SwiperSlide className="w-full !flex items-center justify-center h-full">
@@ -121,7 +122,7 @@ export function ProductDetails() {
           )}
         </Swiper>
         <Swiper onSwiper={setThumbsSwiper} spaceBetween={10} slidesPerView={4} freeMode={true} watchSlidesProgress={true}
-          modules={[FreeMode, Thumbs]}
+          modules={[FreeMode, Thumbs, Navigation]}
           className="thumb shadow-[0_15px_15px_-15px_rgba(0,0,0,0.3)] w-full aspect-[4/1] !hidden md:!block">
           {[props.slide1, props.slide2].map(i => 
             <SwiperSlide className="w-full !flex items-center justify-center h-full">
