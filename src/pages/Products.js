@@ -1,5 +1,5 @@
 import { Product } from './Product';
-import { useState, useEffect } from 'react';
+import { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
 export function Products() {
   const [products, setProducts] = useState([])
@@ -24,7 +24,14 @@ export function Products() {
               </div>
             </div>
             <div className='flex flex-wrap justify-between w-full mt-4 mb-6'>                
-              {products.sort((a, b) => {
+              {products.length === 0 ?
+                <div className='mx-auto flex items-center'>
+                  <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
+                  <div className='mx-2'></div>
+                  <div>Đang tải sản phẩm</div>
+                </div>
+              :
+              products.sort((a, b) => {
                 if (sort === "Tên sản phẩm từ A-Z") {
                   if (a.name > b.name) {
                     return 1
@@ -39,9 +46,7 @@ export function Products() {
                   }
                 }
               }).map(i => 
-                  <>
                     <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name}/>
-                  </>
                 )}
             </div>
           </div>
