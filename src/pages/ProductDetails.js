@@ -8,7 +8,7 @@ import 'swiper/css/thumbs';
 import { FreeMode, Thumbs, Pagination, Navigation } from 'swiper/modules';
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
-export function ProductDetails() {
+export default function ProductDetails() {
   const [params] = useSearchParams()
   const [product, setProduct] = useState({})
   useEffect(() => {

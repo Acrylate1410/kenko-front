@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-export function News() {
+export default function News() {
     const [articleList, setArticleList] = useState([])
     useEffect(() => {
       fetch("https://kenko-api.onrender.com/articles/get_articles").then(res => res.json()).then(data => {

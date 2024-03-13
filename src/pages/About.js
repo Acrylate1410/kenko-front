@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 
-export function About() {
+export default function About() {
     return (
         <>
             <div className='mt-8 text-xs ml-8 md:ml-32 text-gray-500'><Link to="/">Trang chủ</Link><span className='mx-1'>|</span><span className="font-semibold">Giới thiệu</span></div>

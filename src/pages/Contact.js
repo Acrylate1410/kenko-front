@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { useRef } from "react";
 import { MdMailOutline, MdOutlineLocationOn, MdOutlinePhone } from "react-icons/md";
-export function Contact() {
+export default function Contact() {
     const name = useRef(null)
     const phone = useRef(null)
     const email = useRef(null)

@@ -1,7 +1,7 @@
 import { Product } from './Product';
 import { useState, useEffect, Suspense } from 'react';
 import { Link } from 'react-router-dom';
-export function Products() {
+export default function Products() {
   const [products, setProducts] = useState([])
   const [sort, setSort] = useState("Tên sản phẩm từ A-Z")
     useEffect(() => {

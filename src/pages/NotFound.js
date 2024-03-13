@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
 
-export function NotFound() {
+export default function NotFound() {
   return (
     <>
       <img src="404.png" alt="404 not found" className="mx-auto mt-12"></img>

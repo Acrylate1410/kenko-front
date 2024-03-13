@@ -6,7 +6,7 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {  Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Product } from './Product';
-export function Home() {
+export default function Home() {
     return (
         <div className="relative">
           <Swiper slidesPerView={1} autoplay={{delay: 5000, disableOnInteraction: false}}

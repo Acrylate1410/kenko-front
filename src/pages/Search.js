@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 import { Link, useSearchParams } from "react-router-dom";
 import { Product } from "./Product";
-export function Search() {
+export default function Search() {
     const [results, setResults] = useState([])
     const [params] = useSearchParams()
     useEffect(() => {
