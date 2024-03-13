@@ -6,7 +6,6 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import {  Autoplay, Pagination, Navigation } from 'swiper/modules';
 import { Product } from './Product';
-
 export function Home() {
     return (
         <div className="relative">
