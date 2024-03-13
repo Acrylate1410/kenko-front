@@ -34,8 +34,6 @@ function App() {
             <Route path="tin-tuc" element={<News />} />
             <Route path="lien-he" element={<Contact />} />
             <Route path="gioi-thieu" element={<About />} />
-            <Route path="news_dashboard" element={<NewsDashboard />} />
-            <Route path="add_article" element={<ArticleUploadForm />} />
             <Route path="search" element={<Search />} />
           </Route>
         </Routes>
