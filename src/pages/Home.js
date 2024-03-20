@@ -23,7 +23,7 @@ export default function Home() {
                   <span className='ml-2'>&rarr;</span>
                 </Link>
               </div>
-              <hr className='mx-8 border border-t-blue-950 mb-8'/>
+              <hr className='mx-4 md:mx-8 border border-t-blue-950 mb-8'/>
               <div className='md:flex md:justify-between md:items-center flex-wrap'>
                 <ProductSwiper/>
               </div>
@@ -61,7 +61,12 @@ function ProductSwiper() {
             spaceBetween: 30
           },
         }} navigation={true} modules={[Navigation]} className='products md:!mx-8 !w-[92%] md:!w-full'>
-            {products.map(i => 
+            {products.length === 0 ? 
+              <div className='mx-auto flex items-center justify-center'>
+                <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
+                <div className='mx-2'></div>
+                <div>Đang tải sản phẩm</div>
+              </div> : products.map(i => 
               <SwiperSlide key={i.name} className='!bg-white'>
                 <Product src={i.thumbnail} name={i.name} link={i.link}/>
               </SwiperSlide>
@@ -86,7 +91,12 @@ function ArticleSwiper() {
             slidesPerView: 3,
           },
         }} spaceBetween={30} navigation={true} modules={[Navigation]} className='!mx-4 md:!mx-8'>
-      {articleList.map(i =>
+      {articleList.length === 0 ? 
+              <div className='mx-auto flex items-center justify-center'>
+                <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
+                <div className='mx-2'></div>
+                <div>Đang tải bài viết</div>
+              </div> : articleList.map(i =>
         <SwiperSlide key={i.title}>
             <Link to={i.link ? i.link : "/bai-viet?id=" + i._id}>
               <img className='h-60 w-full object-cover' alt={i.title} src={i.thumbnail}></img>
