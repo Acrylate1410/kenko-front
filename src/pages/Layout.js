@@ -89,7 +89,7 @@ const Layout = () => {
         </div>
 )};
 
-function HSearchBar() {
+function HSearchBar() { // adjustments
   const query = useRef("")
   const [products, setProducts] = useState([])
   const outerRef = useRef()
@@ -136,7 +136,7 @@ function HSearchBar() {
     </form>
   )
 }
-function VSearchBar() {
+function VSearchBar() {// adjustments
   const outerRef = useRef()
   const query = useRef("")
   const [products, setProducts] = useState([])
