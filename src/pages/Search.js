@@ -12,7 +12,7 @@ export default function Search() {
     }, []);
     return (
         <div className="mb-8">
-            <h1 className="mt-4 text-lg font-semibold text-center">{"Tìm thấy " + results.length + " kết quả"}</h1>
+            <h1 className="mt-4 text-lg font-semibold text-center mb-6">{"Tìm thấy " + results.length + " kết quả"}</h1>
             <div className="flex flex-wrap">
                 {!isFetch.current && <div className='mx-auto flex items-center justify-center'>
                 <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
