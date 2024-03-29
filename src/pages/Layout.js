@@ -31,7 +31,7 @@ const Layout = () => {
                       {text: "Tin tức", link: "/tin-tuc"},
                       {text: "Liên hệ", link: "/lien-he"}].map(i => 
                         <Link reloadDocument to={i.link} key={i.text}>
-                            <div className='cursor-pointer text-yellow-950 border-b border-gray-300 pl-6 py-3 text-[#093489] font-medium ' onClick={() => {setOpen(false)}}>{i.text}</div>
+                            <div className='cursor-pointer text-blue-950 border-b border-gray-300 pl-6 py-3 text-[#093489] font-medium ' onClick={() => {setOpen(false)}}>{i.text}</div>
                         </Link>
                     )}
                 </div>
