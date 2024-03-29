@@ -76,10 +76,10 @@ function Details(props) {
   const [hover, setHover] = useState(0)
   return (
       <div className="w-4/5 mx-auto my-8 text-justify">
-        <div className="font-semibold my-4 py-6 overflow-x-auto">
-          <span onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap mr-2" : "px-8 pb-4 cursor-pointer whitespace-nowrap mr-2"}>Mô tả sản phẩm</span>
-          <span onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap mr-2" : "px-8 pb-4 cursor-pointer whitespace-nowrap mr-2"}>Công dụng</span>
-          <span onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-8 border-b-2 border-b-blue-950 text-blue-950 pb-4 cursor-pointer whitespace-nowrap mr-2" : "px-8 pb-4 cursor-pointer whitespace-nowrap mr-2"}>Hướng dẫn sử dụng</span>
+        <div className="font-semibold my-4 py-6 md:flex">
+          <div onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-8 bg-blue-950 text-white py-2 cursor-pointer rounded-lg mr-2" : "px-8 py-2 cursor-pointer  mr-2"}>Mô tả sản phẩm</div>
+          <div onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-8 bg-blue-950 text-white py-2 cursor-pointer rounded-lg mr-2" : "px-8 py-2 cursor-pointer  mr-2"}>Công dụng</div>
+          <div onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-8 bg-blue-950 text-white py-2 cursor-pointer rounded-lg mr-2" : "px-8 py-2 cursor-pointer  mr-2"}>Hướng dẫn sử dụng</div>
         </div>
           {tab === 1 ? 
             <div className="text-[15px] mt-2">

@@ -26,7 +26,7 @@ const Layout = () => {
                 <div className="text-4xl ml-auto flex justify-end mt-6 mr-6" onClick={() => setOpen(false)}><IoClose/></div>
                 <div className='mt-20'>
                     {[{text: "Trang chủ", link: "/"}, 
-                      {text: "Về JpanWell", link: "/ve-chung-toi"},
+                      {text: "Giới thiệu", link: "/gioi-thieu"},
                       {text: "Sản phẩm", link: "/danh-muc-san-pham"},
                       {text: "Tin tức", link: "/tin-tuc"},
                       {text: "Liên hệ", link: "/lien-he"}].map(i => 
@@ -89,7 +89,7 @@ const Layout = () => {
         </div>
 )};
 
-function HSearchBar() { // adjustments
+function HSearchBar() {
   const query = useRef("")
   const [products, setProducts] = useState([])
   const outerRef = useRef()
@@ -136,7 +136,7 @@ function HSearchBar() { // adjustments
     </form>
   )
 }
-function VSearchBar() {// adjustments
+function VSearchBar() {
   const outerRef = useRef()
   const query = useRef("")
   const [products, setProducts] = useState([])
