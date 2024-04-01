@@ -21,7 +21,7 @@ const Layout = () => {
           <div className="z-0 relative md:hidden text-4xl" onClick={() => setOpen(true)}><IoMenuOutline/></div>
           {isOpen && 
             <div className="md:hidden">
-              <div className="fixed top-0 bottom-0 left-0 right-0 bg-black opacity-60 z-10"></div>
+              <div className="fixed top-0 bottom-0 left-0 right-0 bg-black opacity-60 z-10" onClick={() => setOpen(false)}></div>
               <div className={'fixed top-0 bottom-0 left-[33%] right-0 bg-white z-[100] '}>
                 <div className="text-4xl ml-auto flex justify-end mt-6 mr-6" onClick={() => setOpen(false)}><IoClose/></div>
                 <div className='mt-20'>
