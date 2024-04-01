@@ -46,7 +46,7 @@ export default function Footer() {
                             <Link to="tel:0965091155" className='h-9 aspect-square flex justify-center items-center my-2  rounded-full border border-blue-950 hover:scale-125 transition hover:bg-blue-950 hover:text-white hover:border-white'>
                                 <FaPhoneVolume className="text-xl"/>
                             </Link> 
-                            <Link to="https://www.facebook.com/profile.php?id=61554886507619&sk=friends_likes" className="mx-2 h-9 aspect-square flex justify-center items-center my-2  rounded-full border border-blue-950 hover:scale-125 hover:bg-[#0866ff] hover:text-white hover:border-white transition ">
+                            <Link to="https://www.facebook.com/profile.php?id=61554886507619" className="mx-2 h-9 aspect-square flex justify-center items-center my-2  rounded-full border border-blue-950 hover:scale-125 hover:bg-[#0866ff] hover:text-white hover:border-white transition ">
                                 <FaFacebookF className="text-xl"/>
                             </Link>
                             <Link to="" className="h-9 aspect-square flex justify-center items-center my-2  rounded-full border border-blue-950 hover:scale-125 hover:bg-[#0a7cff] hover:text-white hover:border-white transition ">
