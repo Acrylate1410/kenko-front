@@ -45,8 +45,7 @@ export default function Products() {
                     return 1
                   }
                 }
-              }).map(i => 
-                <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name} extracss="mx-4"/>)}
+              }).map(i => <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name} extracss="mx-4"/>)}
             </div>
           </div>
         </>

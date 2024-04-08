@@ -76,10 +76,10 @@ function Details(props) {
   const [hover, setHover] = useState(0)
   return (
       <div className="w-4/5 mx-auto my-8 text-justify">
-        <div className="font-semibold my-4 md:py-6 md:flex">
-          <div onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-8 bg-blue-950 text-white py-2 cursor-pointer rounded-lg mr-2 text-center mb-2 md:mb-0" : "px-8 py-2 cursor-pointer mr-2 text-center mb-2 md:mb-0"}>Mô tả sản phẩm</div>
-          <div onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-8 bg-blue-950 text-white py-2 cursor-pointer rounded-lg mr-2 text-center mb-2 md:mb-0" : "px-8 py-2 cursor-pointer mr-2 text-center mb-2 md:mb-0"}>Công dụng</div>
-          <div onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-8 bg-blue-950 text-white py-2 cursor-pointer rounded-lg mr-2 text-center mb-2 md:mb-0" : "px-8 py-2 cursor-pointer mr-2 text-center mb-2 md:mb-0"}>Hướng dẫn sử dụng</div>
+        <div className="font-semibold my-4 md:my-6 py-2 md:flex border-y border-y-blue-950">
+          <div onClick={() => setTab(1)} onMouseEnter={() => setHover(1)} onMouseLeave={() => setHover(0)} className={tab === 1 || hover === 1 ? "px-7 bg-blue-950 text-white py-1.5 cursor-pointer rounded-lg mr-2 text-center mb-2 md:mb-0" : "px-7 py-1.5 cursor-pointer mr-2 text-center mb-2 md:mb-0"}>Mô tả sản phẩm</div>
+          <div onClick={() => setTab(2)} onMouseEnter={() => setHover(2)} onMouseLeave={() => setHover(0)} className={tab === 2 || hover === 2 ? "px-7 bg-blue-950 text-white py-1.5 cursor-pointer rounded-lg mr-2 text-center mb-2 md:mb-0" : "px-7 py-1.5 cursor-pointer mr-2 text-center mb-2 md:mb-0"}>Công dụng</div>
+          <div onClick={() => setTab(3)} onMouseEnter={() => setHover(3)} onMouseLeave={() => setHover(0)} className={tab === 3 || hover === 3 ? "px-7 bg-blue-950 text-white py-1.5 cursor-pointer rounded-lg mr-2 text-center mb-2 md:mb-0" : "px-7 py-1.5 cursor-pointer mr-2 text-center mb-2 md:mb-0"}>Hướng dẫn sử dụng</div>
         </div>
           {tab === 1 ? 
             <div className="text-[15px] mt-2">
