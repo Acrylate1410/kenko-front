@@ -3,7 +3,7 @@ import { PiShoppingCartSimpleThin } from "react-icons/pi"
 import { useState } from "react";
 export function Product(props) {   
     return (
-        <Link reloadDocument to={"/san-pham?id=" + props.link} className='w-[45%] md:w-[23%] text-center relative bg-white mb-8'>
+        <Link reloadDocument to={"/san-pham?id=" + props.link} className={'w-[45%] md:w-[22%] text-center relative bg-white mb-8 ' + props.extracss}>
             <Thumbnail src={props.src} name={props.name}/>
             <div className='font-semibold mt-2 h-9 md:h-6 text-sm md:text-base text-blue-950'>{props.name}<span></span></div>
             <div className="mb-2 md:mt-1 text-xs md:text-sm"></div>

@@ -12,9 +12,9 @@ export default function Products() {
     return (
         <>
           <div className='mt-8 text-xs ml-8 md:ml-32 text-gray-500'><Link to="/">Trang chủ</Link><span className='mx-1'>|</span><span className='font-semibold'>Danh mục sản phẩm</span></div>
-          <div className='mx-8 mt-4 md:mt-0'>
+          <div className='mt-4 md:mt-0'>
             <div className="md:ml-auto">
-              <div className='flex items-center justify-end'>
+              <div className='flex items-center justify-end mr-7'>
                 <label for="orders" className='text-sm font-semibold text-blue-950'>Sắp xếp theo</label>
                 <div className='mx-1'></div>
                 <select onChange={(e) => {setSort(e.target.value)}} name="orders" id="orders" className='border py-1 border-gray-500 text-xs flex justify-between items-center outline-0 px-1'>
@@ -23,7 +23,7 @@ export default function Products() {
                 </select>
               </div>
             </div>
-            <div className='flex flex-wrap justify-between w-full mt-4 mb-6'>                
+            <div className='flex flex-wrap w-full mt-4 mb-6 md:ml-3'>                
               {products.length === 0 ?
                 <div className='mx-auto flex items-center'>
                   <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
@@ -45,7 +45,8 @@ export default function Products() {
                     return 1
                   }
                 }
-              }).map(i => <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name}/>)}
+              }).map(i => 
+                <Product src={i.thumbnail} name={i.name} link={i.link} key={i.name} extracss="mx-4"/>)}
             </div>
           </div>
         </>
