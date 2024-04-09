@@ -14,8 +14,6 @@ const Layout = () => {
     const [pos, setPos] = useState("right-[-61px]")
     const HamburgerComponent = () => {
       const [isOpen, setOpen] = useState(false)
-      let status
-      isOpen ? status = "" : status = "hidden"
       return (
         <>       
           <div className="z-0 relative md:hidden text-4xl" onClick={() => setOpen(true)}><IoMenuOutline/></div>
