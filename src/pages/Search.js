@@ -14,11 +14,13 @@ export default function Search() {
         <div className="mb-8">
             <h1 className="mt-4 text-lg font-semibold text-center mb-6">{"Tìm thấy " + results.length + " kết quả"}</h1>
             <div className="flex flex-wrap">
-                {!isFetch.current && <div className='mx-auto flex items-center justify-center'>
-                <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
-                <div className='mx-2'></div>
-                <div>Đang tải sản phẩm</div>
-              </div>}
+                {!isFetch.current && 
+                    <div className='mx-auto flex items-center justify-center'>
+                        <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
+                        <div className='mx-2'></div>
+                        <div>Đang tải sản phẩm</div>
+                    </div>
+                }
                 {results.map(i =>
                     <>
                         <div className="md:ml-8 ml-4"></div>
