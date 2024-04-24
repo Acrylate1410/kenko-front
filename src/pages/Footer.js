@@ -7,9 +7,9 @@ export default function Footer() {
     return (
         <footer className='md:flex pt-6 pb-6 md:pb-12 md:text-start w-full px-6 md:px-12 text-blue-950'>
             <div className="w-full md:ml-8 ">
-                <div className='flex cursor-pointer w-36'>
+                <Link to="/" reloadDocument className='flex cursor-pointer w-36'>
                     <img src="LOGOKENKO-01.png" alt="KENKO" className='object-contain'></img>
-                </div>
+                </Link>
                 <div className="leading-7 md:flex md:justify-between">
                     <div className="mt-4 md:w-2/5 text-justify">
                         <div className="font-semibold border-b border-b-blue-950 pb-2 w-full">Công ty TNHH xuất nhập khẩu và thương mại Akiko</div>
