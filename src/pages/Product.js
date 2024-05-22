@@ -17,9 +17,9 @@ export function Product(props) {
 }
 
 function Thumbnail(props) {
-    const [glare, setGlare] = useState("left-[-90%]") 
+    const [glare, setGlare] = useState("left-[-95%]") 
     return (
-        <div className='w-full h-56 flex justify-center items-center overflow-hidden relative' onMouseEnter={() => setGlare("left-[100%] transition-[left] duration-[2500ms]")} onMouseLeave={() => setGlare("left-[-90%]")}>
+        <div className='w-full h-56 flex justify-center items-center overflow-hidden relative' onMouseEnter={() => setGlare("left-[100%] transition-[left] duration-[2500ms]")} onMouseLeave={() => setGlare("left-[-95%]")}>
             <div className={"md:block hidden opacity-50 bg-gradient-to-t from-white to-transparent h-8 w-[250%] absolute top-0 -rotate-45 " + glare}></div>
             <img src={props.src} className="h-[75%]" alt={props.name}></img>
         </div>
