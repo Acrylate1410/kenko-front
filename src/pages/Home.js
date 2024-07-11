@@ -60,11 +60,11 @@ function ProductSwiper() {
             slidesPerView: 4,
             spaceBetween: 30
           },
-        }} navigation={true} modules={[Navigation]} className='products md:!mx-8 !w-[92%] md:!w-full'>
+        }} navigation={true} modules={[Navigation]} className='products md:!px-8 !w-[92%] md:!w-full'>
             {products.length === 0 ? 
               <div className='mx-auto flex items-center justify-center'>
                 <div className='h-8 w-8 border border-y-black border-l-black rounded-full animate-spin'></div>
-                <div className='mx-2'></div>
+                <div className='mx-1'></div>
                 <div>Đang tải sản phẩm</div>
               </div> : products.map(i => 
               <SwiperSlide key={i.name} className='!bg-white'>
