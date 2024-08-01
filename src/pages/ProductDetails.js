@@ -12,7 +12,7 @@ export default function ProductDetails() {
   const [params] = useSearchParams()
   const [product, setProduct] = useState({})
   useEffect(() => {
-      fetch("https://kenko-api.onrender.com/products/get_one_product/" + params.get("id")).then(res => res.json()).then(data => {
+      fetch("https://okyibhzr7o.genhosting.net/kenko/products/get_one_product/" + params.get("id")).then(res => res.json()).then(data => {
         setProduct(data[0] || {})
       }).catch(error => {})
   }, []);

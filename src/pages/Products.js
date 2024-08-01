@@ -5,7 +5,7 @@ export default function Products() {
   const [products, setProducts] = useState([])
   const [sort, setSort] = useState("Tên sản phẩm từ A-Z")
     useEffect(() => {
-      fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
+      fetch("https://okyibhzr7o.genhosting.net/kenko/products/get_products").then(res => res.json()).then(data => {
         setProducts(data || [])
       }).catch(error => {})
     }, []);

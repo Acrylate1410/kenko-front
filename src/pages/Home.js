@@ -46,7 +46,7 @@ export default function Home() {
 function ProductSwiper() {
     const [products, setProducts] = useState([])
     useEffect(() => {
-      fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
+      fetch("https://okyibhzr7o.genhosting.net/kenko/products/get_products").then(res => res.json()).then(data => {
         setProducts(data || [])
       }).catch(error => {})
     }, []);
@@ -78,7 +78,7 @@ function ProductSwiper() {
 function ArticleSwiper() {
   const [articleList, setArticleList] = useState([])
   useEffect(() => {
-    fetch("https://kenko-api.onrender.com/articles/get_articles").then(res => res.json()).then(data => {
+    fetch("https://okyibhzr7o.genhosting.net/kenko/articles/get_articles").then(res => res.json()).then(data => {
         setArticleList(data || [])
     }).catch(error => {})
   }, []);

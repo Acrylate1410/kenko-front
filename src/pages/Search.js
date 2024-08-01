@@ -6,7 +6,7 @@ export default function Search() {
     const isFetch = useRef(false)
     const [params] = useSearchParams()
     useEffect(() => {
-        fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
+        fetch("https://okyibhzr7o.genhosting.net/kenko/products/get_products").then(res => res.json()).then(data => {
             setResults(data.filter(el => el.name.toLowerCase().includes(params.get("query").replaceAll("-", " "))) || [])
         }).then(isFetch.current = true).catch(error => {})
     }, []);

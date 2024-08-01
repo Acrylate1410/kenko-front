@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 export default function News() {
     const [articleList, setArticleList] = useState([])
     useEffect(() => {
-      fetch("https://kenko-api.onrender.com/articles/get_articles").then(res => res.json()).then(data => {
+      fetch("https://okyibhzr7o.genhosting.net/kenko/articles/get_articles").then(res => res.json()).then(data => {
           setArticleList(data || [])
       }).catch(error => {})
     }, []);

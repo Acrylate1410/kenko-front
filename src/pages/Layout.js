@@ -94,7 +94,7 @@ function HSearchBar() {
   const navigate = useNavigate();
   const showSuggestion = (e) => {
     query.current = e
-    fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
+    fetch("https://okyibhzr7o.genhosting.net/kenko/products/get_products").then(res => res.json()).then(data => {
         setProducts(data || [])
     }).catch(error => {})
   }
@@ -141,7 +141,7 @@ function VSearchBar() {
   const navigate = useNavigate();
   const showSuggestion = (e) => {
     query.current = e
-    fetch("https://kenko-api.onrender.com/products/get_products").then(res => res.json()).then(data => {
+    fetch("https://okyibhzr7o.genhosting.net/kenko/products/get_products").then(res => res.json()).then(data => {
         setProducts(data || [])
     }).catch(error => {})
   }
